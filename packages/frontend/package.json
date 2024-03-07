@@ -15,5 +15,8 @@
   ],
   "scripts": {
     "test": "node ./__tests__/frontend.test.js"
+  },
+  "dependencies": {
+    "backend": "file:../backend"
   }
 }
