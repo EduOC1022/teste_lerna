@@ -2,6 +2,13 @@
   "name": "teste_lerna",
   "packageManager": "yarn@4.2.2",
   "workspaces": [
-    "frontend/*"
-  ]
+    "frontend",
+    "backend"
+  ],
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "scripts": {
+    "dev": "concurrently \"cd frontend && yarn start\""
+  }
 }
