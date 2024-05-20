@@ -9,6 +9,12 @@
     "concurrently": "^8.2.2"
   },
   "scripts": {
-    "dev": "concurrently \"cd frontend && yarn start\""
+    "start-backend": "cd backend && node app && --watch",
+    "start-frontend": "cd frontend && yarn start",
+    "start-relatorio": "/bin/python3 /home/eduardocoelho/eduardo/teste_lerna/relatorio/app.py",
+    "dev": "concurrently \"yarn run start-backend\" \"cd ..\" \"yarn run start-frontend\" \"cd ..\" \"yarn run start-relatorio\""
+  },
+  "dependencies": {
+    "hapi-cors-headers": "^1.0.3"
   }
 }

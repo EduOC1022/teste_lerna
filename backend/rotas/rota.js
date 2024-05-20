@@ -1,12 +1,17 @@
-import server from "../bd"
+const { bd } = require('../config');
 
 const rotas = async () => {
 
-    server.route([
+    bd.route([
         {
             method: 'POST',
             path: '/cadastro',
             handler: controlador.cadastrar
+        },
+        {
+            method: 'GET',
+            path: '/pesquisa',
+            handler: controlador.pesquisar
         }
     ])
 }

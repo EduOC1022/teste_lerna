@@ -5,6 +5,7 @@ import Grid from "@mui/material/Grid";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import { format } from 'date-fns';
+import axios from 'axios';
 
 const hoje = new Date();
 hoje.setHours(23, 59, 0, 0);
@@ -75,7 +76,21 @@ function App() {
         <Formik
           // validationSchema={schema}
           initialValues={initialValues}
-          onSubmit={(data, {setSubmitting})=> {}}
+          onSubmit={(data, {setSubmitting})=> {
+            // Local para formatar os dados de entrada
+            axios
+              .post('http://localhost:3001/create', data, {headers: {'Content-Type': 'application/json'}})
+              .then((response) => {
+                const {data} = response;
+                console.log(data.message)
+              })
+              .catch((error) => {
+                console.error("Erro ao enviar dados para o servidor:", error);
+              })
+              .finally(() => {
+                setSubmitting(false);
+              })
+          }}
         >
           {({ handleSubmit }) => {
             return (

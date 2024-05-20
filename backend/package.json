@@ -9,6 +9,8 @@
   "author": "Eduardo Coelho",
   "license": "ISC",
   "dependencies": {
-    "@hapi/hapi": "^21.3.9"
+    "@hapi/hapi": "21.0.0",
+    "cors": "^2.8.5",
+    "pg": "^8.11.5"
   }
 }
