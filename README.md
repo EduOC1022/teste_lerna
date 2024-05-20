@@ -2,4 +2,5 @@
 
 ## Anotações:
 
-- Atualmente, os próprios gerenciadores de pacotes (npm, yarn, pnpm) conseguem rodar vários projetos ao mesmo tempo.
+- Atualmente, os próprios gerenciadores de pacotes (npm, yarn, pnpm) conseguem rodar vários projetos ao mesmo tempo utilizando os workspaces.
+
