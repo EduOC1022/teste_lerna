@@ -1,0 +1,17 @@
+{
+  "$schema": "./node_modules/nx/schemas/nx-schema.json",
+  "targetDefaults": {
+    "start": {
+      "dependsOn": [
+        "^start"
+      ]
+    },
+    "build": {
+      "dependsOn": [
+        "^build"
+      ]
+    }
+  },
+  "defaultBase": "main",
+  "nxCloudAccessToken": "Y2I3MGNjNmQtMTNiYi00MWIxLWJhNjgtMjhhZjgyMTcwZDdjfHJlYWQtd3JpdGU="
+}

@@ -11,3 +11,6 @@
 
 #!.yarn/cache
 .pnp.*
+
+
+.nx/cache
