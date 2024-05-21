@@ -1,6 +1,6 @@
 const Hapi = require("@hapi/hapi");
 const knex = require("./knex-index");
-const Controler = require("./controladores/controlador")
+const Controler = require("./controladores/controlador");
 
 const init = async () => {
   const server = Hapi.server({
@@ -13,12 +13,12 @@ const init = async () => {
     },
   });
 
-//Rotas
+  //Rotas
 
   server.route({
     method: "POST",
     path: "/create",
-    handler: Controler.cadastrarPessoa
+    handler: Controler.cadastrarPessoa,
   });
 
   server.route({
@@ -48,16 +48,14 @@ const init = async () => {
     method: "PUT",
     path: "/update/{cpf}",
     handler: async (request, h) => {
-        const { cpf } = request.params;
-        const { nome, data_nascimento, email } = request.payload;
+      const { cpf } = request.params;
+      const { nome, data_nascimento, email } = request.payload;
       try {
-        const result = await knex("pessoa")
-          .where("cpf", cpf)
-          .update({
-            nome,
-            data_nascimento,
-            email
-          });
+        const result = await knex("pessoa").where("cpf", cpf).update({
+          nome,
+          data_nascimento,
+          email,
+        });
 
         if (result) {
           return h
@@ -85,11 +83,9 @@ const init = async () => {
     method: "DELETE",
     path: "/delete/{cpf}",
     handler: async (request, h) => {
-        const { cpf } = request.params;
+      const { cpf } = request.params;
       try {
-        const result = await knex("pessoa")
-          .where("cpf", cpf)
-          .delete();
+        const result = await knex("pessoa").where("cpf", cpf).delete();
 
         if (result) {
           return h
