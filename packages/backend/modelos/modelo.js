@@ -5,12 +5,18 @@ const Mdl = {
   cadastrarPessoa: async (query) => {
       const { cpf, nome, data_nascimento, email } = query;
 
-      return await knex("pessoa").insert({
+      const consulta = knex("pessoa")
+      await knex("pessoa").insert({
         cpf: cpf,
         nome: nome,
         data_nascimento: data_nascimento,
         email: email,
+        
+      
+
       });
+
+      return consulta
   },
 
   buscarPessoa: async () => {
