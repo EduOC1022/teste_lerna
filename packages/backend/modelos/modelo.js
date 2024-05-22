@@ -2,8 +2,8 @@ const knex = require("../knex-index");
 
 const Mdl = {
 
-  cadastrarPessoa: async (request) => {
-      const { cpf, nome, data_nascimento, email } = request.payload;
+  cadastrarPessoa: async (query) => {
+      const { cpf, nome, data_nascimento, email } = query;
 
       return await knex("pessoa").insert({
         cpf: cpf,

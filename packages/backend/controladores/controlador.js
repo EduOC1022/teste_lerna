@@ -12,8 +12,9 @@ const cadastrarPessoa = async (request, h) => {
 };
 
 const buscarPessoa = async (request, h) => {
+  const {query, headers} = request
   try {
-    const result = await Mdl.buscarPessoa()
+    const result = await Mdl.buscarPessoa(query, headers)
 
     return h
       .response(result)
