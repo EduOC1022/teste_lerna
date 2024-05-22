@@ -9,7 +9,7 @@
     "nx": "19.0.4"
   },
   "scripts": {
-    "start-backend": "cd packages && cd backend && node app",
+    "start-backend": "cd packages && cd backend && nodemon app",
     "start-frontend": "cd packages && cd frontend && yarn start",
     "dev": "concurrently \"yarn run start-backend\" \"cd ..\" \"yarn run start-frontend\""
   },
