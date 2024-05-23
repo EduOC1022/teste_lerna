@@ -1,8 +1,9 @@
 const Mdl = require("../modelos/modelo");
 
 const cadastrarPessoa = async (request, h) => {
+  const query = request.payload;
   try {
-    await Mdl.cadastrarPessoa(request);
+    await Mdl.cadastrarPessoa(query);
 
     return h.response({ message: "Dados salvos com sucesso!" }).code(201);
   } catch (error) {
@@ -12,9 +13,9 @@ const cadastrarPessoa = async (request, h) => {
 };
 
 const buscarPessoa = async (request, h) => {
-  const {query, headers} = request
+  const query = request;
   try {
-    const result = await Mdl.buscarPessoa(query, headers)
+    const result = await Mdl.buscarPessoa(query)
 
     return h
       .response(result)

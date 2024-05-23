@@ -1,6 +1,5 @@
 import React from "react";
 import { Form, Formik, Field } from "formik";
-// import * as yup from 'yup';
 import Grid from "@mui/material/Grid";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
@@ -22,62 +21,14 @@ const CPF = "cpf";
 const DATA_NASCIMENTO = "data_nascimento";
 const EMAIL = "email";
 
-// const validationSchema = ()=> {
-//   return yup.object().shape({
-//     [fieldNames.NOME]: yup
-//       .string()
-//       .test('nome', 'O nome pode conter somente letras!!', val => {
-//         if (val && !(/^[a-zA-Z ]+$/.test(val))) {
-//           return false;
-//         }
-//         return true;
-//       })
-//       .nullable(),
-
-//     [fieldNames.CPF]: yup
-//       .number()
-//       .required()
-//       .test('cpf', 'CPF inválido!!', cpf => {
-//         let cpfFormatado = cpf.replace('.', '').replace('-', '')
-//         if (cpf && !(/^[/\D+/g]+$/.test(cpf)) || cpfFormatado.length > 12) {
-//           return false;
-//         } else {
-//           return true
-//         }
-//       })
-//       .nullable(),
-
-//     [fieldNames.DATA_NASCIMENTO]: yup
-//       .date()
-//       .typeError('Data inválida!!')
-//       .max(new Date(), 'Não pode ser uma data futura!!')
-//       .nullable(),
-
-//     [fieldNames.EMAIL]: yup
-//       .string()
-//       .nullable()
-//       .test('email', 'E-mail inválido', email => {
-//         if (email && !('@' in email) || !('.com' in email) ) {
-//           return false
-//         } else {
-//           return true
-//         }
-//       })
-
-//   })
-// };
-
 function Cadastrar() {
-  // const schema = validationSchema()
 
   return (
     <>
       {
         <Formik
-          // validationSchema={schema}
           initialValues={initialValues}
           onSubmit={(data, {setSubmitting})=> {
-            // Local para formatar os dados de entrada
             axios
               .post('http://localhost:3001/create', data, {headers: {'Content-Type': 'application/json'}})
               .then((response) => {
