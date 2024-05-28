@@ -5,21 +5,13 @@ import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import { format } from 'date-fns';
 import axios from 'axios';
+import { 
+  InitialValues, 
+  FieldNames 
+} from "utilitarios";
 
-const hoje = new Date();
-hoje.setHours(23, 59, 0, 0);
-
-const initialValues = {
-  nome: "",
-  cpf: "",
-  data_nascimento: hoje,
-  email: "",
-};
-
-const NOME = "nome";
-const CPF = "cpf";
-const DATA_NASCIMENTO = "data_nascimento";
-const EMAIL = "email";
+const initialValues = InitialValues.cadastroPessoas;
+const fieldNames = FieldNames.cadastroPessoas;
 
 function Cadastrar() {
 
@@ -60,7 +52,7 @@ function Cadastrar() {
                   >
 
                     {/* Campo Nome */}
-                    <Field name={NOME}>
+                    <Field name={fieldNames.NOME}>
                       {({ field }) => {
                         return (
                           <TextField
@@ -74,7 +66,7 @@ function Cadastrar() {
                     </Field>
 
                     {/* Campo CPF */}
-                    <Field name={CPF}>
+                    <Field name={fieldNames.CPF}>
                       {({ field }) => {
                         return (
                           <TextField
@@ -88,7 +80,7 @@ function Cadastrar() {
                     </Field>
 
                     {/* Campo Email */}
-                    <Field name={EMAIL}>
+                    <Field name={fieldNames.EMAIL}>
                       {({ field }) => {
                         return (
                           <TextField
@@ -102,7 +94,7 @@ function Cadastrar() {
                     </Field>
 
                     {/* Campo Data de Nascimento */}
-                    <Field name={DATA_NASCIMENTO}>
+                    <Field name={fieldNames.DATA_NASCIMENTO}>
                       {({ 
                         field: { name, value },
                         form: { setFieldValue }
@@ -119,7 +111,7 @@ function Cadastrar() {
                               name: name
                             }}
                             value={dataFormatada}
-                            onChange={data => setFieldValue(DATA_NASCIMENTO, data.target.value)}
+                            onChange={data => setFieldValue(fieldNames.DATA_NASCIMENTO, data.target.value)}
                           />
                         );
                       }}

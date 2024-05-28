@@ -1,5 +1,6 @@
 const Hapi = require("@hapi/hapi");
 const Controler = require("./controladores/controlador");
+const Paths = require("utilitarios/paths/paths")
 
 const init = async () => {
   const server = Hapi.server({
@@ -16,25 +17,25 @@ const init = async () => {
 
   server.route({
     method: "POST",
-    path: "/create",
+    path: Paths.CREATE,
     handler: Controler.cadastrarPessoa,
   });
 
   server.route({
     method: "GET",
-    path: "/read",
+    path: Paths.READ,
     handler: Controler.buscarPessoa,
   });
 
   server.route({
     method: "PUT",
-    path: "/update/{cpf}",
+    path: Paths.UPDATE,
     handler: Controler.modificarPessoa,
   });
 
   server.route({
     method: "DELETE",
-    path: "/delete/{cpf}",
+    path: Paths.DELETE,
     handler: Controler.excluirPessoa,
   });
 

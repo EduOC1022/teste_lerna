@@ -7,21 +7,13 @@ import axios from "axios";
 import { format, parse } from "date-fns";
 import { useSignals } from "@preact/signals-react/runtime";
 import { pesquisa } from "../../signals/signals";
+import { InitialValues, FieldNames } from "utilitarios";
 
-const hoje = new Date();
-hoje.setHours(23, 59, 0, 0);
+const initialValues = InitialValues.pesquisaPessoas;
+const fieldNames = FieldNames.pesquisaPessoas;
 
-const initialValues = {
-  cpf: "",
-  nome: "",
-  data_nascimento: "",
-  email: "",
-};
-
-const CPF = "cpf";
-const NOME = "nome";
-const DATA_NASCIMENTO = "data_nascimento";
-const EMAIL = "email";
+console.log("initialValues: ", InitialValues);
+console.log("fieldNames: ", FieldNames);
 
 const FormPesquisa = () => {
   useSignals();
@@ -100,7 +92,7 @@ const FormPesquisa = () => {
                       }}
                     >
                       {/* Campo NOME */}
-                      <Field name={NOME}>
+                      <Field name={fieldNames.NOME}>
                         {({ field }) => {
                           return (
                             <TextField
@@ -114,7 +106,7 @@ const FormPesquisa = () => {
                       </Field>
 
                       {/* Campo CPF */}
-                      <Field name={CPF}>
+                      <Field name={fieldNames.CPF}>
                         {({ field }) => {
                           return (
                             <TextField
@@ -128,7 +120,7 @@ const FormPesquisa = () => {
                       </Field>
 
                       {/* Campo Email */}
-                      <Field name={EMAIL}>
+                      <Field name={fieldNames.EMAIL}>
                         {({ field }) => {
                           return (
                             <TextField
@@ -142,7 +134,7 @@ const FormPesquisa = () => {
                       </Field>
 
                       {/* Campo Data de Nascimento */}
-                      <Field name={DATA_NASCIMENTO}>
+                      <Field name={fieldNames.DATA_NASCIMENTO}>
                         {({
                           field: { name, value },
                           form: { setFieldValue },
@@ -168,7 +160,7 @@ const FormPesquisa = () => {
                               value={dataFormatada}
                               onChange={(data) =>
                                 setFieldValue(
-                                  DATA_NASCIMENTO,
+                                  fieldNames.DATA_NASCIMENTO,
                                   data.target.value
                                 )
                               }
