@@ -5623,6 +5623,7 @@ __metadata:
     cors: "npm:^2.8.5"
     knex: "npm:^3.1.0"
     pg: "npm:^8.11.5"
+    utilitarios: "npm:1.0.0"
   languageName: unknown
   linkType: soft
 
