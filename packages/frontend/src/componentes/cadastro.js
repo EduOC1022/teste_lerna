@@ -8,7 +8,7 @@ import axios from 'axios';
 import { 
   InitialValues, 
   FieldNames 
-} from "utilitarios";
+} from "@stt/utilitarios";
 
 const initialValues = InitialValues.cadastroPessoas;
 const fieldNames = FieldNames.cadastroPessoas;

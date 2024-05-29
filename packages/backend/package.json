@@ -1,8 +1,8 @@
 {
-  "name": "backend",
+  "name": "@stt/backend",
   "version": "1.0.0",
   "description": "",
-  "main": "knex-index.js",
+  "main": "dist/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon app"
@@ -11,9 +11,9 @@
   "license": "ISC",
   "dependencies": {
     "@hapi/hapi": "21.0.0",
+    "@stt/utilitarios": "*",
     "cors": "^2.8.5",
     "knex": "^3.1.0",
-    "pg": "^8.11.5",
-    "utilitarios": "1.0.0"
+    "pg": "^8.11.5"
   }
 }

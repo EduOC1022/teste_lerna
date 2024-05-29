@@ -1,18 +1,18 @@
 const path = require('path');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-  entry: './src/index.js',
+  mode: 'development',
+  entry: './packages/utilitarios/index.js',
   output: {
-    filename: 'main.js',
-    path: path.resolve(__dirname, 'dist')
+    filename: 'index.js',
+    path: path.resolve(__dirname, 'packages/utilitarios/dist')
   },
-  module: {
-    rules: [
-    ],
-  },
-  resolve: {
-    alias: {
-      utilitarios: path.resolve(__dirname, 'node_modules/utilitarios')
-    }
-  }
+  plugins: [
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: './packages/utilitarios/', to: '.' }
+      ],
+    }),
+  ],
 };

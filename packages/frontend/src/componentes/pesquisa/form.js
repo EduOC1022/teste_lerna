@@ -7,7 +7,7 @@ import axios from "axios";
 import { format, parse } from "date-fns";
 import { useSignals } from "@preact/signals-react/runtime";
 import { pesquisa } from "../../signals/signals";
-import { InitialValues, FieldNames } from "utilitarios";
+import { InitialValues, FieldNames } from "@stt/utilitarios";
 
 const initialValues = InitialValues.pesquisaPessoas;
 const fieldNames = FieldNames.pesquisaPessoas;

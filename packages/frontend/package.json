@@ -1,5 +1,5 @@
 {
-  "name": "frontend",
+  "name": "@stt/frontend",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -9,18 +9,18 @@
     "@mui/material": "^5.15.17",
     "@mui/x-data-grid": "^7.5.0",
     "@preact/signals-react": "^2.0.1",
+    "@stt/backend": "*",
+    "@stt/utilitarios": "*",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.6.8",
-    "backend": "1.0.0",
     "date-fns": "^3.6.0",
     "formik": "^2.4.6",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.23.1",
     "react-scripts": "5.0.1",
-    "utilitarios": "1.0.0",
     "web-vitals": "^2.1.4",
     "yup": "^1.4.0"
   },
