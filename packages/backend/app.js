@@ -5,10 +5,10 @@ const { Paths } = require("@stt/utilitarios/dist")
 const init = async () => {
   const server = Hapi.server({
     port: 3001,
-    host: "localhost",
+    host: "150.162.202.14",
     routes: {
       cors: {
-        origin: ["http://localhost:3000"],
+        origin: ["http://150.162.202.14:3000"],
       },
     },
   });
