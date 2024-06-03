@@ -14,9 +14,6 @@
   "workspaces": [
     "packages/*"
   ],
-  "dependencies": {
-    "hapi-cors-headers": "1.0.3"
-  },
   "scripts": {
     "clean": "yarn cache clean && npx nx reset",
     "build": "lerna run build --parallel=false",

@@ -18,16 +18,16 @@ const Mdl = {
     const busca = knex('pessoa')
 
     if (cpf) {
-      busca.where('pessoa.cpf', '=', cpf)
+      busca.whereRaw("CAST(pessoa.cpf AS TEXT) LIKE ?", [`${cpf}%`]);
     }
     if (nome) {
-      busca.where('pessoa.nome', '=', nome)
+      busca.where('pessoa.nome', 'LIKE', `${nome}%`)
     }
     if (data_nascimento) {
-      busca.where('pessoa.data_nascimento', '=', data_nascimento)
+      busca.where('pessoa.data_nascimento', 'LIKE', `${data_nascimento}%`)
     }
     if (email) {
-      busca.where('pessoa.email', '=', email)
+      busca.where('pessoa.email', 'LIKE', `${email}%`)
     }
     return busca
 
