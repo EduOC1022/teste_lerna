@@ -1,20 +1,45 @@
-const path = require('path');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
+const path = require("path");
+const glob = require("glob");
+
+// Lista todos os arquivos JavaScript dentro de src/utilitarios e seus subdiretórios
+const jsFiles = glob.sync("./packages/utilitarios/**/*.js");
+
+// Cria um objeto de entradas com base nos arquivos encontrados
+const entries = {};
+jsFiles.forEach((file) => {
+  const relativePath = path.relative("./packages/utilitarios", file); // Caminho relativo dentro de utilitarios
+  const fileName = relativePath.replace(/\.js$/, ""); // Remove a extensão.js do nome do arquivo
+  entries[fileName] = `./${file}`;
+});
 
 module.exports = {
-  mode: 'development',
-  entry: './packages/utilitarios/index.js',
-  output: {
-    filename: 'index.js',
-    path: path.resolve(__dirname, 'packages/utilitarios/dist')
-  },
-  plugins: [
-    new CopyWebpackPlugin({
-      patterns: [
-        { from: './packages/utilitarios/', to: '.' }
+    mode: "development",
+    entry: entries,
+    output: {
+      filename: (pathData) => {
+        // Usa a estrutura original dos diretórios
+        return `${pathData.chunk.name}.js`;
+      },
+      libraryTarget: "commonjs2", // Exporta como CommonJS
+      path: path.resolve(__dirname, "packages/utilitarios/dist"),
+    },
+    resolve: {
+      preferRelative: true, // This should help with resolving issues
+    },
+    module: {
+      rules: [
+        {
+          test: /\.m?js$/, // Expressões regulares para arquivos JS
+          exclude: /(node_modules)/, // Exclui node_modules
+          use: {
+            loader: "babel-loader", // Usa o babel-loader
+            options: {
+              presets: ["@babel/preset-env"], // Preset para transpilar para CommonJS
+            },
+          },
+        },
       ],
-    }),
-  ],
-};
+    },
+  };
 
 /// Anotação = fazer um bundler para o utilitarios

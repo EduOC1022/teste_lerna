@@ -17,9 +17,7 @@ const InitialValues = {
     pesquisaPessoas: ValuesPesquisaPessoas,
 };
 
-const Paths = {
-    paths: rotas
-}
+const Paths = rotas
 
 export  {
     Paths,

@@ -1,10 +1,8 @@
-import Paths from "@stt/utilitarios";
-
 const Hapi = require("@hapi/hapi");
 const Controler = require("./controladores/controlador");
+const { Paths } = require("@stt/utilitarios/dist")
 
 const init = async () => {
-  const { paths } = Paths
   const server = Hapi.server({
     port: 3001,
     host: "localhost",
@@ -19,25 +17,25 @@ const init = async () => {
 
   server.route({
     method: "POST",
-    path: paths.CREATE,
+    path: Paths.CREATE,
     handler: Controler.cadastrarPessoa,
   });
 
   server.route({
     method: "GET",
-    path: paths.READ,
+    path: Paths.READ,
     handler: Controler.buscarPessoa,
   });
 
   server.route({
     method: "PUT",
-    path: paths.UPDATE,
+    path: Paths.UPDATE,
     handler: Controler.modificarPessoa,
   });
 
   server.route({
     method: "DELETE",
-    path: paths.DELETE,
+    path: Paths.DELETE,
     handler: Controler.excluirPessoa,
   });
 
