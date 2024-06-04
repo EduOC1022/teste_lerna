@@ -33,18 +33,18 @@ Antes de começar, certifique-se de ter instalado o Node.js (versão recomendada
   - Remove os arquivos temporários
     
   Comandos do react
-  ```bash
-  yarn build
-  ```
-  ```bash
-  yarn dev
-  ```
-  ```bash
-  yarn test
-  ```
-  ```bash
-  yarn eject
-  ```
+     ```bash
+     yarn build
+     ```
+     ```bash
+     yarn dev
+     ```
+     ```bash
+     yarn test
+     ```
+     ```bash
+     yarn eject
+     ```
 
 - packages/backend:
   
@@ -52,6 +52,7 @@ Antes de começar, certifique-se de ter instalado o Node.js (versão recomendada
   yarn build
   ```
   - Cria o arquivo dist na pasta utilitários com o webpack
+
  
   ```bash
   yarn dev
@@ -60,7 +61,9 @@ Antes de começar, certifique-se de ter instalado o Node.js (versão recomendada
 
 - packages/utilitarios:
   
-  ```bash yarn rm```
+  ```bash
+  yarn rm
+  ```
   - Remove os arquivos temporários
     
   
