@@ -15,8 +15,7 @@
     "packages/*"
   ],
   "scripts": {
-    "clean": "yarn cache clean && npx nx reset",
-    "build": "lerna run build --parallel=false",
-    "dev": "lerna run dev"
+    "clean": "lerna run rm && yarn cache clean && npx nx reset",
+    "dev": "lerna run build --parallel=false && lerna run dev"
   }
 }

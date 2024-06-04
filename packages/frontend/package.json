@@ -25,6 +25,7 @@
     "yup": "1.4.0"
   },
   "scripts": {
+    "rm": "rm -rf node_modules build",
     "build": "react-scripts build",
     "dev": "react-scripts start",
     "test": "react-scripts test",
