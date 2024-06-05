@@ -49,7 +49,7 @@ const FormPesquisa = () => {
             let params = estruturarFiltros(data);
             console.log("params: ", params);
                 axios
-                    .get("http://localhost:3001/read", {
+                    .get("http://150.162.202.14:3001/read", {
                         params: params,
                         headers: { "Content-Type": "application/json" },
                     })

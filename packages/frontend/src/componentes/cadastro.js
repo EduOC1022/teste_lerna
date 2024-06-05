@@ -22,7 +22,7 @@ function Cadastrar() {
           initialValues={initialValues}
           onSubmit={(data, {setSubmitting})=> {
             axios
-              .post('http://localhost:3001/create', data, {headers: {'Content-Type': 'application/json'}})
+              .post('http://150.162.202.43:3001/create', data, {headers: {'Content-Type': 'application/json'}})
               .then((response) => {
                 const {data} = response;
                 console.log(data.message)

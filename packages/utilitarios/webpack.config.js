@@ -2,12 +2,15 @@ const path = require("path");
 const glob = require("glob");
 
 // Lista todos os arquivos JavaScript dentro de src/utilitarios e seus subdiretórios
-const jsFiles = glob.sync("./packages/utilitarios/**/*.js");
+const jsFiles = glob.sync("./**/*.js", { 
+  cwd: __dirname,
+  ignore: "**/webpack.config.js"
+});
 
 // Cria um objeto de entradas com base nos arquivos encontrados
 const entries = {};
 jsFiles.forEach((file) => {
-  const relativePath = path.relative("./packages/utilitarios", file); // Caminho relativo dentro de utilitarios
+  const relativePath = path.relative(__dirname, file); // Caminho relativo dentro de utilitarios
   const fileName = relativePath.replace(/\.js$/, ""); // Remove a extensão.js do nome do arquivo
   entries[fileName] = `./${file}`;
 });
@@ -21,7 +24,7 @@ module.exports = {
         return `${pathData.chunk.name}.js`;
       },
       libraryTarget: "commonjs2", // Exporta como CommonJS
-      path: path.resolve(__dirname, "packages/utilitarios/dist"),
+      path: path.resolve(__dirname, "dist"),
     },
     resolve: {
       preferRelative: true, // This should help with resolving issues

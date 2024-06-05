@@ -16,7 +16,7 @@ import axios from "axios";
 
 const excluirPessoa = (cpf) => {
   axios
-    .delete(`http://localhost:3001/delete/${cpf}`, {
+    .delete(`http://150.162.202.14:3001/delete/${cpf}`, {
       headers: { "Content-Type": "application/json" },
     })
     .catch((error) => {
