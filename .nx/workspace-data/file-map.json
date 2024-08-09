@@ -1,0 +1,223 @@
+{
+  "version": "6.0",
+  "nxVersion": "19.5.7",
+  "deps": {
+    "lerna": "8.1.3"
+  },
+  "pathMappings": {},
+  "nxJsonPlugins": [],
+  "fileMap": {
+    "nonProjectFiles": [
+      {
+        "file": ".editorconfig",
+        "hash": "11525873501642599925"
+      },
+      {
+        "file": ".gitattributes",
+        "hash": "5816063049553364052"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "10321433000243976118"
+      },
+      {
+        "file": ".gitignore copy",
+        "hash": "5403484524555424706"
+      },
+      {
+        "file": "README.md",
+        "hash": "12702244895158836393"
+      },
+      {
+        "file": "lerna.json",
+        "hash": "9454557644730873497"
+      },
+      {
+        "file": "nx.json",
+        "hash": "7286212762725966133"
+      },
+      {
+        "file": "package-lock.json",
+        "hash": "9662846284629569077"
+      },
+      {
+        "file": "package.json",
+        "hash": "10269805349063488767"
+      }
+    ],
+    "projectFileMap": {
+      "@stt/frontend": [
+        {
+          "file": "packages/frontend/.env",
+          "hash": "5068302534447797797"
+        },
+        {
+          "file": "packages/frontend/.gitignore",
+          "hash": "5403484524555424706"
+        },
+        {
+          "file": "packages/frontend/README.md",
+          "hash": "17524295600495787358"
+        },
+        {
+          "file": "packages/frontend/package.json",
+          "hash": "3814214288153716247",
+          "deps": [
+            "npm:@emotion/react",
+            "npm:@emotion/styled",
+            "npm:@mui/icons-material",
+            "npm:@mui/material",
+            "npm:@mui/x-data-grid",
+            "npm:@preact/signals-react",
+            "@stt/backend",
+            "@stt/utilitarios",
+            "npm:@testing-library/jest-dom",
+            "npm:@testing-library/react",
+            "npm:@testing-library/user-event",
+            "npm:axios",
+            "npm:date-fns",
+            "npm:formik",
+            "npm:react",
+            "npm:react-dom",
+            "npm:react-router-dom",
+            "npm:react-scripts",
+            "npm:web-vitals",
+            "npm:yup"
+          ]
+        },
+        {
+          "file": "packages/frontend/public/index.html",
+          "hash": "13308863839730475495"
+        },
+        {
+          "file": "packages/frontend/public/manifest.json",
+          "hash": "1447645250373428393"
+        },
+        {
+          "file": "packages/frontend/public/robots.txt",
+          "hash": "2790380794362165217"
+        },
+        {
+          "file": "packages/frontend/src/App.js",
+          "hash": "6394124194903410196"
+        },
+        {
+          "file": "packages/frontend/src/App.test.js",
+          "hash": "14776661775854159295"
+        },
+        {
+          "file": "packages/frontend/src/componentes/cadastro.js",
+          "hash": "1806020876067837794"
+        },
+        {
+          "file": "packages/frontend/src/componentes/menu.js",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "packages/frontend/src/componentes/pesquisa/form.js",
+          "hash": "2671920346662115984"
+        },
+        {
+          "file": "packages/frontend/src/componentes/pesquisa/index.js",
+          "hash": "652020912924581799"
+        },
+        {
+          "file": "packages/frontend/src/index.js",
+          "hash": "10956356902301170739"
+        },
+        {
+          "file": "packages/frontend/src/paginas/index.js",
+          "hash": "8714749489415942768"
+        },
+        {
+          "file": "packages/frontend/src/reportWebVitals.js",
+          "hash": "8937667725995285050"
+        },
+        {
+          "file": "packages/frontend/src/setupTests.js",
+          "hash": "16903885983588411080"
+        },
+        {
+          "file": "packages/frontend/src/signals/signals.js",
+          "hash": "12866534744781617033"
+        }
+      ],
+      "@stt/backend": [
+        {
+          "file": "packages/backend/app.js",
+          "hash": "6432456617913373837"
+        },
+        {
+          "file": "packages/backend/controladores/controlador.js",
+          "hash": "8630650917221811931"
+        },
+        {
+          "file": "packages/backend/knex-index.js",
+          "hash": "9368475547307269136"
+        },
+        {
+          "file": "packages/backend/modelos/modelo.js",
+          "hash": "11601454906908839392"
+        },
+        {
+          "file": "packages/backend/package.json",
+          "hash": "8029928029586734666",
+          "deps": [
+            "npm:@hapi/hapi",
+            "@stt/utilitarios",
+            "npm:knex",
+            "npm:nodemon",
+            "npm:pg"
+          ]
+        }
+      ],
+      "@stt/utilitarios": [
+        {
+          "file": "packages/utilitarios/.gitignore",
+          "hash": "3820400493554763786"
+        },
+        {
+          "file": "packages/utilitarios/fieldNames/cadastroPessoas.js",
+          "hash": "3711843980059925897"
+        },
+        {
+          "file": "packages/utilitarios/fieldNames/pesquisaPessoas.js",
+          "hash": "3711843980059925897"
+        },
+        {
+          "file": "packages/utilitarios/index.js",
+          "hash": "6520791535481573321"
+        },
+        {
+          "file": "packages/utilitarios/initialValues/cadastroPessoas.js",
+          "hash": "13372961215968503802"
+        },
+        {
+          "file": "packages/utilitarios/initialValues/pesquisaPessoas.js",
+          "hash": "3060362763092004094"
+        },
+        {
+          "file": "packages/utilitarios/package.json",
+          "hash": "7667379537681692989",
+          "deps": [
+            "npm:@babel/core",
+            "npm:@babel/preset-env",
+            "npm:babel-loader",
+            "npm:copy-webpack-plugin",
+            "npm:glob@10.4.1",
+            "npm:webpack",
+            "npm:webpack-cli"
+          ]
+        },
+        {
+          "file": "packages/utilitarios/paths/paths.js",
+          "hash": "12277548192827092607"
+        },
+        {
+          "file": "packages/utilitarios/webpack.config.js",
+          "hash": "7809714329419170315"
+        }
+      ]
+    }
+  }
+}

@@ -4,7 +4,7 @@
   "description": "",
   "main": "dist/app.js",
   "scripts": {
-    "dev": "nodemon app"
+    "dev": "nodemon app "
   },
   "author": "Eduardo Coelho",
   "license": "ISC",
