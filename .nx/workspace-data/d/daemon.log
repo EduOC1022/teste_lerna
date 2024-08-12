@@ -118,3 +118,6 @@
 [NX Daemon Server] - 2024-08-09T17:12:21.846Z - Done responding to the client handleHashTasks
 [NX Daemon Server] - 2024-08-09T17:12:21.846Z - Handled HASH_TASKS. Handling time: 12. Response time: 0.
 [NX Daemon Server] - 2024-08-09T17:12:30.440Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2024-08-09T20:12:21.938Z - [WATCHER]: Stopping the watcher for /home/eduardocoelho/eduardo/teste_lerna (sources)
+[NX Daemon Server] - 2024-08-09T20:12:21.938Z - [WATCHER]: Stopping the watcher for /home/eduardocoelho/eduardo/teste_lerna (outputs)
+[NX Daemon Server] - 2024-08-09T20:12:21.939Z - Server stopped because: "10800000ms of inactivity"
