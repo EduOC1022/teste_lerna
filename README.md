@@ -4,7 +4,7 @@
 
 ### Pré-requisitos
 
-Antes de começar, certifique-se de ter instalado o Node.js (versão recomendada: 18.19.0) e yarn (versão recomendada: 4.2.1). Além disso, é necessário ter o Git instalado em sua máquina.
+Antes de começar, certifique-se de ter instalado o Node.js (versão recomendada: 18.19.0). Além disso, é necessário ter o Git instalado em sua máquina.
 
 ### Instalação
 
@@ -15,12 +15,12 @@ Antes de começar, certifique-se de ter instalado o Node.js (versão recomendada
 
 3. Instale as dependências do projeto:
    ```bash
-   yarn install
+   npm install
    ```
 
 5. Rode o sistema:
    ```bash
-   yarn dev
+   npm run dev
    ```
 
 ### Comandos Auxiliares
@@ -28,41 +28,41 @@ Antes de começar, certifique-se de ter instalado o Node.js (versão recomendada
 - packages/frontend:
 
   ```bash
-  yarn rm
+  npm run rm
   ```
   - Remove os arquivos temporários
     
   Comandos do react
      ```bash
-     yarn build
+     npm run build
      ```
      ```bash
-     yarn dev
+     npm run dev
      ```
      ```bash
-     yarn test
+     npm run test
      ```
      ```bash
-     yarn eject
+     npm run eject
      ```
 
 - packages/backend:
   
   ```bash
-  yarn build
+  npm run build
   ```
   - Cria o arquivo dist na pasta utilitários com o webpack
 
  
   ```bash
-  yarn dev
+  npm run dev
   ```
   - Roda o backend com o nodemon
 
 - packages/utilitarios:
   
   ```bash
-  yarn rm
+  npm run rm
   ```
   - Remove os arquivos temporários
     

@@ -15,5 +15,4 @@ node_modules/
 .pnp.*
 
 
-.nx/cache
-.nx/cache
+.nx/*
